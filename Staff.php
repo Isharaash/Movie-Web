@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
+if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Staff') {
     header("location: Login.php");
     exit(); 
 }
@@ -22,7 +22,7 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
             left: 0;
             top: 120px;
             width: 200px;
-            height: 60%;
+            height: 50%;
             background-color: #333;
             color: #fff;
             padding-top: 20px;
@@ -63,15 +63,12 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
 <div class="sidebar">
     <h3><?php echo $_SESSION['fname']; ?></h3>
     <ul class="sidebar-menu">
-        <li><a href="Admin.php">Home</a></li>
-        <li><a href="Add Admins.php">Add Admins</a></li>
-
-        <li><a href="Admin Profile.php">Profile</a></li>
-        <li><a href="Admin Add Movies.php">Add Movies</a></li>
-        <li><a href="Admin View Movies.php">Movies</a></li>
-        <li><a href="Admin Add Showtimw.php">Add Show Time</a></li>
-        <li><a href="Admin  Show Time.php">Show Time</a></li>
-        <li><a href="Admin View Booking.php">Booking</a></li>
+        <li><a href="Staff.php">Home</a></li>
+        <li><a href="Staff Profile.php">Profile</a></li>
+        <li><a href="Staff View Movies.php">Movies</a></li>
+        <li><a href="Staff Add Showtimw.php">Add Show Time</a></li>
+        <li><a href="Staff Show Time.php">Show Time</a></li>
+        <li><a href="Staff View Booking.php">Booking</a></li>
         <li><a href="Logout.php">Logout</a></li>
     </ul>
 </div>

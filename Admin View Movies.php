@@ -77,7 +77,7 @@
         <h2>Movie Details</h2>
         <?php
         include 'Connection.php';
-        include 'Customers.php';
+        include 'Admin.php';
         // Query to fetch movie details
         $sql = "SELECT * FROM movies";
         $result = $conn->query($sql);

@@ -57,88 +57,74 @@ echo "<script type='text/javascript'>alert('$msg');</script>";
 <title>Login Form</title>
 	
 <style>
-.form{
-    width: 380px;
-    height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: 200px;
-    left: 450px;
-    transform: translate(0%,-5%);
-    border-radius: 10px;
-    padding: 25px;
-}
-.form h2{
-    width: 330px;
-    font-family: sans-serif;
-    text-align: center;
-    color: #ff7200;
-    font-size: 22px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
-}
-.form input{
-    width: 340px;
-    height: 35px;
-    background: transparent;
-    border-bottom: 1px solid #ff7200;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #ffffff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
-}
-.form input:focus{
-    outline: none;
-}
-::placeholder{
-    color: #fff;
-    font-family: Arial;
-}
-.btnn{
-    width: 340px;
-    height: 40px;
-    background: #ff7200;
-    border: none;
-    margin-top: 25px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
-    transition: 0.4s ease;
-}
-.btnn:hover{
-    background: #fff;
-    color: #ff7200;
-}
-.btnn a{
-    text-decoration: none;
-    color: #020202;
-    font-weight: bold;
-}
-.form .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding-top: 20px;
-    text-align: center;
-    color: #ffffff;
-}
-.form .link a{
-    text-decoration: none;
-    color: #ff7200;
+body {
+    
+    background-color: #f0f0f0;
 }
 
-.main{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
-    background-position: center;
-    background-size: cover;
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:400px;
+    height:300px;
+    margin-top:-220px
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 
@@ -167,7 +153,9 @@ echo "<script type='text/javascript'>alert('$msg');</script>";
 	
 
 <body>
-
+<?php
+    include "NavBar.php";
+    ?>
 
 
  
@@ -185,7 +173,11 @@ echo "<script type='text/javascript'>alert('$msg');</script>";
     </div>
 
     </div>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cineplex. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -1,0 +1,28 @@
+<?php
+
+session_start();
+if(session_destroy()){
+
+	echo '<script>alert("You Have been Successfully Logout.");</script>';
+            
+
+	echo '<meta http-equiv="refresh" content="2;url=Login.php">';
+	exit(); 
+
+
+}
+?>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	
+</body>
+</html>

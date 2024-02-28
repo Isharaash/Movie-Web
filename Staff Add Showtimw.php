@@ -29,10 +29,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Showtime</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+
+.showtime-form {
+    width: 60%; /* Adjust width as needed */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.showtime-form h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.showtime-form label {
+    font-weight: bold;
+}
+
+.showtime-form select,
+.showtime-form input[type="datetime-local"],
+.showtime-form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.showtime-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.showtime-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+        </style>
 </head>
 <body>
-    <div class="container">
+<?php
+include("Staff.php")
+    ?>
+   <div class="container showtime-form">
         <h2>Add Showtime</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="movie">Movie:</label>

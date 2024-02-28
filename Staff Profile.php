@@ -1,5 +1,5 @@
 <?php
-include("Customers.php")
+include("Staff.php")
 ?>
 
 <!DOCTYPE html>

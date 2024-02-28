@@ -1,6 +1,7 @@
 <?php
 include 'Connection.php';
 
+
 if (!$conn) {
     echo 'Select database first';
 } else {
@@ -35,10 +36,66 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Movie</title>
-    <link rel="stylesheet" href="styles.css">
+<style>
+    /* styles.css */
+
+/* Other styles */
+
+.movie-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left:270px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:500px
+}
+
+.movie-details h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;    
+}
+
+.movie-details label {
+    font-weight: bold;
+}
+
+.movie-details input[type="text"],
+.movie-details input[type="number"],
+.movie-details input[type="date"],
+.movie-details textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Additional styles for other elements within .movie-details */
+
+.movie-details input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.movie-details input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+    </style>
+
 </head>
 <body>
-    <div class="container">
+    <?php
+include("Admin.php")
+    ?>
+   <div class="movie-details">
         <h2>Add Movie</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
             <label for="title">Title:</label>

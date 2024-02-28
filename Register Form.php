@@ -50,93 +50,75 @@
     }
 </script>
 <style>
-.form{
-    width: 400px;
-    height: 600px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: 140px;
-    left: 450px;
-    transform: translate(0%,-5%);
-    border-radius: 10px;
-    padding: 25px;
+body {
+
+    background-color: #f0f0f0;
 }
-.form h2{
-    width: 340px;
-    font-family: sans-serif;
-    text-align: center;
-    color: #ff7200;
-    font-size: 22px;
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
     background-color: #fff;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
-}
-.form input{
-    width: 340px;
-    height: 35px;
-    background: transparent;
-    border-bottom: 1px solid #ff7200;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #ffffff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:500px;
+    height:400px;
 }
 
-.form input:focus{
-    outline: none;
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-::placeholder{
-    color: #fff;
-    font-family: Arial;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.btnn{
-    width: 340px;
-    height: 40px;
-    background: #ff7200;
-    border: none;
-    margin-top: 25px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
-    transition: 0.4s ease;
-}
-.btnn:hover{
-    background: #fff;
-    color: #ff7200;
-}
-.btnn a{
-    text-decoration: none;
-    color: #020202;
-    font-weight: bold;
-}
-
-.main{
+button {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 110vh;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #0056b3;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
 
 
 </style>
 </head>
 <body>
+<?php
+    include "NavBar.php";
+    ?>
  
     <div class="main">
 
     <div class="form">
     <form id="form" name="registration" method="post" action="Register.php" onsubmit="return validateForm()">
-        <h2>SIGN UP HERE</h2>
+        <h2>Registration</h2>
         <input type="text" name="fname" placeholder="Enter First Name Here" id="fname">
         <input type="text" name="lname" placeholder="Enter Last Name Here" id="lname">
         <input type="text" name="Phone" placeholder="Enter Phone Here" id="Phone">
@@ -158,7 +140,11 @@
         
         
 
-
+            <footer>
+        <div class="container">
+            <p>&copy; 2024 Cineplex. All rights reserved.</p>
+        </div>
+    </footer>
 
 
 

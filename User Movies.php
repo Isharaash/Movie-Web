@@ -69,15 +69,28 @@
             .movie-details {
                 flex-grow: 1;
             }
+
+
+
+            footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
         }
     </style>
 </head>
 <body>
+<?php
+    include "NavBar.php";
+    ?>
     <div class="container">
         <h2>Movie Details</h2>
         <?php
         include 'Connection.php';
-        include 'Customers.php';
+      
         // Query to fetch movie details
         $sql = "SELECT * FROM movies";
         $result = $conn->query($sql);
@@ -102,6 +115,14 @@
         }
         ?>
     </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cineplex. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
 

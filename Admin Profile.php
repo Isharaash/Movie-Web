@@ -1,11 +1,11 @@
 <?php
-include("Customers.php")
+include("Admin.php")
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Customers Page</title>
+    <title>Admin Page</title>
 <style>
  
 
