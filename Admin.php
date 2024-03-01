@@ -22,10 +22,11 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
             left: 0;
             top: 120px;
             width: 200px;
-            height: 60%;
+            height: 78%;
             background-color: #333;
             color: #fff;
             padding-top: 20px;
+            margin-top:-70px
 
         }
 

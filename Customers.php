@@ -22,7 +22,7 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Customers') {
             left: 0;
             top: 120px;
             width: 200px;
-            height: 50%;
+            height: 60%;
             background-color: #333;
             color: #fff;
             padding-top: 20px;
