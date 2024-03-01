@@ -69,6 +69,36 @@
             .movie-details {
                 flex-grow: 1;
             }
+           
+.update-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.delete-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #b02a37; 
+}
+
         }
     </style>
 </head>
@@ -78,7 +108,7 @@
         <?php
         include 'Connection.php';
         include 'Admin.php';
-        // Query to fetch movie details
+   
         $sql = "SELECT * FROM movies";
         $result = $conn->query($sql);
 
@@ -93,6 +123,8 @@
                         <p><strong>Release Date:</strong> <?php echo $row["release_date"]; ?></p>
                         <p><strong>Duration:</strong> <?php echo $row["duration"]; ?> minutes</p>
                         <p><strong>Rating:</strong> <?php echo $row["rating"]; ?></p>
+                        <a href="Admin Update Movie.php?id=<?php echo $row["id"]; ?>" class="update-btn">Update Movie</a>
+                        <a href="Admin Delete Movie.php?id=<?php echo $row["id"]; ?>" class="delete-btn">Delete Movie</a>
                     </div>
                 </div>
         <?php

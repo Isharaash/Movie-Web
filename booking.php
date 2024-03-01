@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql_insert) === TRUE) {
         echo "Booking successful!";
+        
     } else {
         echo "Error: " . $sql_insert . "<br>" . $conn->error;
     }

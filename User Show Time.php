@@ -78,6 +78,7 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 1.5em;
+            text-align: center;
         }
 
         .movie-details p {
@@ -93,7 +94,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            margin-left: 100px;
+            margin-left: 60px;
         }
 
         .button:hover {

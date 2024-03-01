@@ -53,7 +53,7 @@
             color: #666;
         }
 
-        /* Responsive layout */
+      
         @media (min-width: 768px) {
             .movie-card {
                 display: flex;

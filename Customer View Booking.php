@@ -69,7 +69,7 @@ if ($_SESSION['role'] === 'Customers') {
             echo "<div class='booking'>";
             echo "<h2>Ticket Booking:</h2>";
             echo "<table>";
-            echo "<tr><th>Film Name</th><th>Time</th><th>Day</th><th>Date</th><th>Seats</th><th>Price</th></tr>";
+            echo "<tr><th>Film Name</th><th>Time</th><th>Day</th><th>Date</th><th>Seats</th></tr>";
 
             while ($row = mysqli_fetch_assoc($result)) {
                 $Booking_id = $row['Booking_id'];
@@ -79,7 +79,7 @@ if ($_SESSION['role'] === 'Customers') {
                 echo "<td>" . $row['end_time'] . "</td>";
                 echo "<td>" . $row['hall_number'] . "</td>";
                 echo "<td>" . $row['seats'] . "</td>";
-                echo "<td>" . $row['total_price'] . "</td>";
+               
                 echo "</tr>";
             }
 

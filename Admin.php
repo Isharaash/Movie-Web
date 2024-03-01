@@ -65,9 +65,8 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] !== 'Admin') {
     <h3><?php echo $_SESSION['fname']; ?></h3>
     <ul class="sidebar-menu">
         <li><a href="Admin.php">Home</a></li>
-        <li><a href="Add Admins.php">Add Admins</a></li>
-
         <li><a href="Admin Profile.php">Profile</a></li>
+        <li><a href="Add Admins.php">Add Admins</a></li>
         <li><a href="Admin Add Movies.php">Add Movies</a></li>
         <li><a href="Admin View Movies.php">Movies</a></li>
         <li><a href="Admin Add Showtimw.php">Add Show Time</a></li>

@@ -78,6 +78,7 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 1.5em;
+            text-align: center;
         }
 
         .movie-details p {
@@ -116,20 +117,20 @@
             include 'Connection.php';
             include 'Staff.php';
 
-            // Initialize search term variable
+        
             $searchTerm = '';
 
-            // Check if search term is provided in the URL
+           
             if (isset($_GET['search'])) {
                 $searchTerm = $_GET['search'];
             }
 
-            // Modify your SQL query to include search term if provided
+         
             $sql = "SELECT movies.title, movies.image_data, movies.description, showtimes.id, showtimes.start_time, showtimes.end_time, showtimes.hall_number
                     FROM showtimes
                     INNER JOIN movies ON showtimes.movie_id = movies.id";
 
-            // If search term is provided, add WHERE clause to filter by movie title
+         
             if (!empty($searchTerm)) {
                 $sql .= " WHERE movies.title LIKE '%$searchTerm%'";
             }
@@ -155,7 +156,7 @@
                         echo "<p><strong>Start Time:</strong> " . $row['start_time'] . "</p>";
                         echo "<p><strong>End Time:</strong> " . $row['end_time'] . "</p>";
                         echo "<p><strong>Hall Number:</strong> " . $row['hall_number'] . "</p>";
-                        // Generate link to book the showtime
+                       
                         echo "<a href='Staff update show time.php?id=" . $row['id'] . "' class='btn'>Update</a>";
                         
                         

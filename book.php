@@ -9,12 +9,12 @@ if ($_SESSION['role'] === 'Customers') {
         $end_time = mysqli_real_escape_string($conn, $_POST['end_time']); 
         $hall_number = mysqli_real_escape_string($conn, $_POST['hall_number']); 
         $seats = intval($_POST['seats']); 
-        $total_price = intval($_POST['total_price']);  // Ensure it's an integer
+   
         $id = $_SESSION['id'];  // Use the customer's ID
 
         // Insert the order into the database
-        $sql = "INSERT INTO booking (id,title,start_time,end_time,hall_number, seats, total_price) 
-                VALUES ('$id', '$title', '$start_time', '$end_time', '$hall_number', '$seats', '$total_price')";
+        $sql = "INSERT INTO booking (id,title,start_time,end_time,hall_number, seats) 
+                VALUES ('$id', '$title', '$start_time', '$end_time', '$hall_number', '$seats')";
 
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Successfully Placed Order.");</script>';

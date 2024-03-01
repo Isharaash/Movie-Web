@@ -16,7 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    VALUES ('$movie_id', '$start_time', '$end_time', '$hall_number')";
 
     if ($conn->query($sql_insert) === TRUE) {
-        echo "New showtime added successfully!";
+        echo '<script>alert("New showtime added successfully!");</script>';
+            echo '<script>window.location.href = "Admin Add Showtimw.php";</script>';
+            exit();
+    
     } else {
         echo "Error: " . $sql_insert . "<br>" . $conn->error;
     }

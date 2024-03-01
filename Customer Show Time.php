@@ -78,6 +78,7 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 1.5em;
+            text-align: center;
         }
 
         .movie-details p {
@@ -156,7 +157,7 @@
                         echo "<p><strong>End Time:</strong> " . $row['end_time'] . "</p>";
                         echo "<p><strong>Hall Number:</strong> " . $row['hall_number'] . "</p>";
                         // Generate link to book the showtime
-                        echo "<a href='Cutomer Booking.php?title=" . urlencode($row['title']) . "&start_time=" . urlencode($row['start_time']) . "&hall_number=" . urlencode($row['hall_number']) . "&end_time=" . urlencode($row['end_time']) . "' class='button'>Book</a>";
+                        echo "<a href='Cutomer Booking.php?title=" . urlencode($row['title']) . "&start_time=" . urlencode($row['start_time']) . "&hall_number=" . urlencode($row['hall_number']) . "&end_time=" . urlencode($row['end_time']) . "' class='button'>Booking</a>";
                         echo "</div></div></div>";
                         $current_movie = $row['title'];
                     }

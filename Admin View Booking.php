@@ -113,7 +113,7 @@ if (isset($_GET['search'])) {
                     <th>End Time</th>
                     <th>Hall Number</th>
                     <th>Seats</th>
-                    <th>Total Price</th>
+                  
                     <th>Phone</th>
                 </tr>
             </thead>
@@ -127,7 +127,7 @@ if (isset($_GET['search'])) {
                     $end_time = $row['end_time'];
                     $hall_number= $row['hall_number'];
                     $seats= $row['seats'];
-                    $total_price = $row['total_price'];
+                   
                     $Phone = $row['Phone'];
 
                     echo "<tr>";
@@ -137,7 +137,7 @@ if (isset($_GET['search'])) {
                     echo "<td>$end_time</td>";
                     echo "<td>$hall_number</td>";
                     echo "<td>$seats</td>";
-                    echo "<td>Rs.$total_price</td>";
+                 
                     echo "<td>$Phone</td>";
                     echo "</tr>";
                 }

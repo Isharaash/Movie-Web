@@ -77,6 +77,7 @@
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top:150px
 }
 
         }

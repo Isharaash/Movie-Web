@@ -17,7 +17,7 @@ if (!$conn) {
         $sql = "INSERT INTO movies (title, description, release_date, duration, rating, image_data) VALUES ('$title', '$description', '$release_date', '$duration', '$rating', '$imgData')";
         if (mysqli_query($conn, $sql)) {
             echo '<script>alert("Successfully Added Movie.");</script>';
-            echo '<script>window.location.href = "AdminAddMovies.php";</script>';
+            echo '<script>window.location.href = "Admin Add Movies.php";</script>';
             exit();
         } else {
             echo "Error adding movie: " . mysqli_error($conn);
@@ -73,7 +73,7 @@ $conn->close();
     box-sizing: border-box;
 }
 
-/* Additional styles for other elements within .movie-details */
+
 
 .movie-details input[type="submit"] {
     background-color: #4CAF50;
@@ -102,7 +102,7 @@ include("Admin.php")
             <input type="text" id="title" name="title" required><br><br>
             
             <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
             
             <label for="release_date">Release Date:</label>
             <input type="date" id="release_date" name="release_date" required><br><br>
